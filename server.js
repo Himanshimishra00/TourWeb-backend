@@ -16,4 +16,8 @@ app.use(express.json());
 app.use('/api/destinations', destinationRoutes);
 app.use('/api/packages', packageRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Backend is live!');
+});
+
 app.listen(PORT, () => console.log('Server running on http://localhost:5000'));
